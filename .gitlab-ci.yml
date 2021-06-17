@@ -1,0 +1,14 @@
+stages:
+  - init
+  - despliegue
+
+hello:
+  stage: init
+  script:
+    - echo "Hello world!"
+
+deploy:
+  stage: despliegue
+  script:
+    - cd /var/www/html
+    - git pull https://github.com/maxsoft21/test.git
